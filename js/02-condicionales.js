@@ -29,15 +29,30 @@ if (edad >= EDAD_MIN) {
 console.log("Adiós");
 */
 // --------------------------------------
-/*let numero = parseInt( prompt("Poné un número entero") );
 
+/*
+let numero = parseInt( prompt("Poné un número entero") );
+
+// FORMA 1
 if (numero > 0) {
     console.log(numero + " es positivo")
 } else if (numero < 0) {
     console.log(numero + " es negativo")
-}  else {
+} else {
     console.log(numero + " es neutro")
-}*/
+}
+
+// FORMA 2
+if (numero > 0) {
+    console.log(numero + " es positivo")
+} else {
+    if (numero < 0) {
+        console.log(numero + " es negativo")
+    }  else {
+        console.log(numero + " es neutro")
+    }
+}
+*/
 // --------------------------------------
 /*¡Ejercicio!
     Dada una edad y un género ("F", "M"), indicar
