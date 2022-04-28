@@ -1,72 +1,79 @@
 
 /*
-// CON WHILE
-let veces = 5;
 let contador = 1;
 
-while (contador <= veces) {
-    console.log(contador + " Hola mundo de los ciclos");
+while ( contador <= 5 ) {
+    console.log(contador +" Hola mundo de los ciclos");
     contador = contador + 1;
 }
 console.log("Adiós");
 */
 
 /*
-let veces = 5;
-// contador++ es lo mismo que poner contador = contador + 1;
+let cont2 = 2;
+while ( cont2 <= 20 ) {
+    console.log(cont2);
+    cont2 = cont2 + 2;
+}*/
+// 5 4 3 2 1 0
+/*
+let cont2 = 5;
+while ( cont2 >= 0 ) {
+    console.log(cont2);
+    cont2 = cont2 - 1;
+}*/
 
-for (let cont = 1; cont <= veces; cont = cont + 1) {
-    console.log(cont + " Hola mundo de los ciclos (con for)");
+// cont = cont + 1  --> cont++
+/*
+let veces = 5;
+for (let cont = 1; cont <= veces; cont++) {
+    console.log(cont +" Hola mundo de los ciclos");
 }
 */
 
-/* El usuario ingresa cuatro números. La computadora dice
- cuál fue el mayor (se supone único) y en que pos apareció
- Ejemplo --> Ingresa 4 7 5 3. El mayor fue 7 en la pos 2 */
 
- /*
+/* 
+ El usuario ingresa cuatro números. La computadora dice
+ cuál fue el mayor (se supone único) y en que pos apareció
+ Ejemplo --> Ingresa 4 7 5 3. "El mayor fue 7 en la pos 2"
+*/
+/*
+let posMayor;
+let mayor = Number.MIN_SAFE_INTEGER; // El menor valor posible
 let numero;
-let maximo = Number.MIN_SAFE_INTEGER; // El menor valor posible
-let posMaximo;
-for (let cont = 1; cont <= 4; cont++) {
-    numero = parseInt(prompt("Poné un número entero"));
-    if (numero > maximo) {
-        maximo = numero;
-        posMaximo = cont;
+let veces = 4;
+for (let cont = 1; cont <= veces; cont++) {
+    numero = parseInt(prompt(cont + ") Ingrese un numero"));
+    if (numero > mayor) {
+        mayor = numero;
+        posMayor = cont;
     }
 }
-console.log("El máximo fue " + maximo + " en la pos " + posMaximo);
+console.log("El mayor fue " + mayor + " en la pos. " + posMayor);
 */
 
 /*
 let numero;
-let maximo = parseInt(prompt("Poné un número entero"));
-let posMaximo = 1;
-for (let cont = 2; cont <= 4; cont++) {
-    numero = parseInt(prompt("Poné un número entero"));
-    if (numero > maximo) {
-        maximo = numero;
-        posMaximo = cont;
+let veces = 4;
+let mayor = parseInt(prompt("Ingrese un numero"));
+let posMayor = 1;
+for (let cont = 2; cont <= veces; cont++) {
+    numero = parseInt(prompt("Ingrese un numero"));
+    if (numero > mayor) {
+        mayor = numero;
+        posMayor = cont;
     }
 }
-console.log("El máximo fue " + maximo + " en la pos " + posMaximo);
+console.log("El mayor fue " + mayor + " en la pos. " + posMayor);
 */
-
-/* El usuario ingresa su edad (entre 1 y 120) */
-
-/*let edad = parseInt(prompt("Ingresá tu edad (entre 1 y 120)"));
-while ( edad < 1 || edad > 120 ) {
-    edad = parseInt(prompt("ERROR. Ingresá tu edad (entre 1 y 120)"));
-}
-console.log("La edad fue validada. Es: " + edad);*/
 
 // Con WHILE (Ciclo de 0..n)
-/*let genero = prompt("Ingresá tu género (M o F)").toUpperCase();
-while ( !(genero == "M" || genero == "F") ) {
-    genero = prompt("ERROR. Ingresá tu género (M o F)").toUpperCase();
+let edad = parseInt(prompt("Ingresá tu edad (entre 1 y 120)"));
+while ( !(edad >= 1 && edad <= 120) ) {
+    edad = parseInt(prompt("ERROR. Ingresá tu edad (entre 1 y 120)"));
 }
-console.log("El género fue validado. Es: " + genero);
-*/
+console.log("La edad fue validada. Es: " + edad);
+
 
 // Con DO-WHILE (Ciclo de 1..n)
 let genero;
@@ -74,6 +81,7 @@ do {
     genero = prompt("Ingresá tu género (M o F)").toUpperCase();
 } while(!(genero == "M" || genero == "F"));
 console.log("El género fue validado. Es: " + genero);
+
 
 // Ley de De Morgan
 // !(genero == "M" || genero == "F")
