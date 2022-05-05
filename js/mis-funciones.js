@@ -1,48 +1,33 @@
-
 /*
- Para invocar una función, hay que colocar su nombre y los paréntesis
- de forma obligatoria. Entre ellos van (si hacen falta) los argumentos.
- La función puede o no retornar un valor.
-
- let retorno = nombre_func( args );
-
- Ejemplo:
- let nombre = prompt("Ingrese un nombre");
- let edad = parseInt( prompt("Ingrese una edad") )
+    Para definir una función:
+        function nombre_func ( param1, param2, paramN ) {
+            // Instrucciones...
+        }
+    
+    Si la función retorna un valor, debe ir al final la 
+    cláusula 'return' con el valor a retornar
 */
 
+// Función que no retorna, ni recibe parámetros
+function mostrarSaltoDeLinea () {
+    console.log("\n"); // Imprime un salto de línea;
+}
 
-/*
-saludar();
-mostrarSaltoDeLinea();
-saludar("María");
-mostrarSaltoDeLinea();
-saludar("Juan", "Carlos");
-*/
+// Función que no retorna, y recibe un parámetro
+function saludar( nom ) {
+    console.log("Hola " + nom);
+}
 
+// Función que retorne, y reciba parámetros
+function leerEnteroEntre(mensaje, minimo, maximo) {
+    let entero = parseInt(prompt(mensaje));
+    while (entero < minimo || entero > maximo) {
+        entero = parseInt(prompt("ERROR. " + mensaje));
+    }
+    return entero;
+}
 
-// Ejemplo de función que retorna pero no recibe parámetros
-// Math.random() viene con JavaScript...
-/*
-console.log( Math.random() );
-let unRandom = Math.random();
-console.log(unRandom)
-*/
-
-
-/*
-let edad = leerEnteroEntre("Ingrese una edad", 1, 120);
-console.log("Obtuvimos un " + edad);
-let notaExamen = leerEnteroEntre("Ingrese una nota", 1, 10);
-console.log("Obtuvimos un " + notaExamen);
-let tempEnAlaska = leerEnteroEntre("Ingrese una temperatura para Alaska", -50, 0);
-console.log("Obtuvimos un " + tempEnAlaska);
-*/
-
-
-let numero = leerEnteroEntre("Ingrese un numero positivo", 1, 10000000);
-if ( esPar(numero) ) {
-    console.log("El número es par");
-} else {
-    console.log("El número es impar")
+// Una función que mejora la legibilidad del código
+function esPar(num) {
+    return num % 2 == 0;
 }
