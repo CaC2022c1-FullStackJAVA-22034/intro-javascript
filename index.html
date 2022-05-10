@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script src="js/mis-funciones.js"></script>
-    <script src="js/05-objetos.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/estilo.css">
+    </head>
+    <body>
+        <h1 id="elTitulo" class="rojo">Aprendiendo más de JavaScript</h1>
+        <a id="enlace" href="http://www.google.com" target="_blank">Ir a Google</a>
+        <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti accusantium nihil nulla tempora dignissimos iure perspiciatis consectetur dolorem. Voluptatem a eaque, deleniti ea officiis illo? Eaque officiis aperiam neque veniam!</p>
+        <p id="p2" class="rojo grande negrita">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, accusamus. Tempore, eligendi a! Asperiores atque placeat dolor quaerat obcaecati aliquid vel distinctio reiciendis eveniet tempore enim, qui sapiente est corrupti.</p>
+
+        <h3>Ejemplo de formulario básico</h3>
+        <form id="formu" action="">
+            <label for="fname">Nombre:</label> <br>
+            <input type="text" id="fname" name="fname">
+            <br>
+            <label for="lname">Apellido:</label> <br>
+            <input type="text" id="lname" name="lname">
+            <br>
+            <label for="mensaje">Tu mensaje:</label> <br>		
+            <textarea id="mensaje" name="message" rows="5" cols="30">Un mensaje de prueba...</textarea>
+            <br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+
+        <script src="js/mis-funciones.js"></script>
+        <script src="js/06-accesoAlDOM.js"></script>
+    </body>
 </html>
